@@ -1,0 +1,26 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+}
+body {
+	 font-family: Helvetica, Arial, sans-serif;
+	 font-size: 14px;
+	 line-height: 1;
+	 font-weight: normal;
+	 background: #f0f0ed;
+	 color: #000;
+}
+a { text-decoration: none; }
+li { list-style: none; }
+
+input, textarea { outline:none; }
+input:active, 
+textarea:active { outline:none; }
+:focus { outline:none; }
+
+a:active, 
+a:focus { outline: none; }
+
+textarea { resize:none; }
