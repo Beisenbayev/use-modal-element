@@ -1,6 +1,6 @@
 {
   "name": "use-modal-element",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple to use hook for creating a modal-window for react-applications",
   "main": "index.js",
   "scripts": {
