@@ -1,0 +1,25 @@
+{
+  "name": "use-modal-hook",
+  "version": "1.0.0",
+  "description": "A simple to use hook for creating a modal-window for react-applications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Beisenbayev/test-modal-app.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "react-modal",
+    "modal"
+  ],
+  "author": "Nursultan Beisenbayev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Beisenbayev/test-modal-app/issues"
+  },
+  "homepage": "https://github.com/Beisenbayev/test-modal-app#readme"
+}
