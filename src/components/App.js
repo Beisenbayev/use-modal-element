@@ -1,7 +1,7 @@
 import React from 'react';
-import Home from './components/Home/Home';
+import Home from './Home';
 
-import useModal from './components/Modal/Modal';
+import useModal from 'use-modal-element'
 
 const App = (props) => {
   const [modal, openModal] = useModal({
