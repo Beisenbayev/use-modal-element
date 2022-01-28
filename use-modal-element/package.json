@@ -2,7 +2,7 @@
   "name": "use-modal-element",
   "version": "1.0.1",
   "description": "A simple to use hook for creating a modal-window for react-applications",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "author": "Nursultan Beisenbayev",
   "license": "ISC",
   "scripts": {
