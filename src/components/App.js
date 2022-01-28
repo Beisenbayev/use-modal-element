@@ -1,12 +1,12 @@
 import React from 'react';
 import Home from './Home';
 
-import useModal from 'use-modal-element'
+import useModal from 'use-modal-element/build';
 
 const App = (props) => {
   const [modal, openModal] = useModal({
     withBackground: true,
-    withCloseButton: false,
+    withCloseButton: true,
     closableBackground: true,
     scrollableBackground: false,
   });

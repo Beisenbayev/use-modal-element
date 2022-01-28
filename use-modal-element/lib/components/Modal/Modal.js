@@ -35,24 +35,22 @@ const useModal = (settings) => {
    useBackgroundScroll(opend, scrollableBackground);
 
    const modal = (
-      <>
-         {opend && createPortal(
-            <div
-               className={classNames('modal-background-init', {
-                  'with-background': withBackground
-               })}>
-               <div ref={modalRef} className='modal-wrapper'>
-                  {withCloseButton && <CloseButton />}
-                  <div className='modal-wrapper-inner'>
-                     <div className='modal-content'>
-                        <h4>Title</h4>
-                     </div>
+      opend && createPortal(
+         <div
+            className={classNames('modal-background-init', {
+               'with-background': withBackground
+            })}>
+            <div ref={modalRef} className='modal-wrapper'>
+               {withCloseButton && <CloseButton />}
+               <div className='modal-wrapper-inner'>
+                  <div className='modal-content'>
+                     <h4>Title</h4>
                   </div>
                </div>
-            </div>,
-            document.getElementById('root'))
-         }
-      </>
+            </div>
+         </div>,
+         document.getElementById('root')
+         )
    );
 
    return [modal, openModal];
