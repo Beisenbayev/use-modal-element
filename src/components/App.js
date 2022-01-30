@@ -1,10 +1,9 @@
 import React from 'react';
 import Home from './Home';
-
 import useModal from 'use-modal-element'
 
 const App = (props) => {
-  const [modal, openModal] = useModal({
+  const [Modal, openModal] = useModal({
     withBackground: true,
     withCloseButton: true,
     closableBackground: true,
@@ -14,7 +13,11 @@ const App = (props) => {
   return (
     <>
       <Home openModal={openModal} />
-      {modal}
+      <Modal
+        title='Обратный звонок'
+        subtitle='Перезвони в ближайшее время.'>
+        <p>awawdaw adwada awdawdaw awdadwawd</p>
+      </Modal>
     </>
   );
 }

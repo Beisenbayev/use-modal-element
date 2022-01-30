@@ -1,21 +1,44 @@
-.content {
+//wrapper important styles
+.wrapper {
    position: absolute !important;
    top: 16px !important;
-   right: 16px !important;
+   right: 12px !important;
+
+   display: flex !important;
+   justify-content: center !important;
+   align-items: center !important;
+}
+
+.wrapper {
+   width: 32px;
+   height: 32px;
+   border-radius: 6px;
+   background: #2b2932;
    cursor: pointer;
-   opacity: 0.3;
+   opacity: 0.9;
 
    &:hover {
       opacity: 1;
    }
+}
+
+//content important styles
+.content {
+   position: relative !important;
+   width: 20px;
+   height: 20px;
 
    &::before,
    &::after {
       content: "";
-      display: block;
-      width: 30px;
+      position: absolute !important;
+      top: 9px !important;
+      left: 2px !important;
+      display: block !important;
+      width: 16px;
       height: 2px;
-      background: #000;
+      border-radius: 4px;
+      background: #fff;
    }
 
    &::before {

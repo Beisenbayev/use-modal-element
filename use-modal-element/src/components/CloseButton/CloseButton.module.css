@@ -1,21 +1,47 @@
-.content {
+.wrapper {
   position: absolute !important;
-  top: 5px !important;
-  right: 5px !important;
-  cursor: pointer;
-  opacity: 0.3;
+  top: 16px !important;
+  right: 12px !important;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
+  -webkit-box-align: center !important;
+      -ms-flex-align: center !important;
+          align-items: center !important;
 }
 
-.content:hover {
+.wrapper {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #2b2932;
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.wrapper:hover {
   opacity: 1;
+}
+
+.content {
+  position: relative !important;
+  width: 20px;
+  height: 20px;
 }
 
 .content::before, .content::after {
   content: "";
-  display: block;
-  width: 15px;
+  position: absolute !important;
+  top: 9px !important;
+  left: 2px !important;
+  display: block !important;
+  width: 16px;
   height: 2px;
-  background: #000;
+  border-radius: 4px;
+  background: #fff;
 }
 
 .content::before {

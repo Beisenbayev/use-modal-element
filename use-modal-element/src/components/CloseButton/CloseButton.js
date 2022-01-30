@@ -3,8 +3,9 @@ import s from './CloseButton.module.css';
 
 const CloseButton = (props) => {
    return (
-      <div className={s.content}
-         onClick={props.closeModal}></div>
+      <div className={s.wrapper} onClick={props.closeModal}>
+         <div className={s.content}></div>
+      </div>
    );
 }
 

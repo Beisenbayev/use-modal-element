@@ -21,10 +21,12 @@
   /* size */
   width: 100vw !important;
   min-height: 100% !important;
-  /* padding */
-  padding: 20px;
   /* style */
   overflow: hidden;
+}
+
+.backgroundInit {
+  padding: 16px;
 }
 
 .backgroundInit.withBackground {
@@ -33,16 +35,33 @@
 
 .wrapper {
   position: relative;
-  width: 400px;
+  width: 470px;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
-  padding: 15px;
+  padding: 40px 32px;
   border-radius: 6px;
   background: #fff;
 }
 
-.text {
-  font-size: 26px;
-  margin-bottom: 40px;
+.title {
+  margin: 0 0 8px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 34px;
+  color: #2b2932;
+}
+
+.subtitle {
+  margin: 8px 0 32px 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #2b2932;
+}
+
+.content {
+  height: 300px;
 }

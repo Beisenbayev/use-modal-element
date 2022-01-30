@@ -34,26 +34,39 @@ const useModal = (settings) => {
    useOnClickOutside(modalRef, closeModal, closableBackground);
    useBackgroundScroll(opend, scrollableBackground);
 
-   const modal = (
-      opend && createPortal(
+   const Modal = (props) => {
+      return (opend && createPortal(
          <div
             className={classNames(s.backgroundInit, {
                [s.withBackground]: withBackground
             })}>
             <div ref={modalRef} className={s.wrapper}>
-               {withCloseButton && <CloseButton />}
+               {/* Modal's default styled close button */}
+               {withCloseButton && <CloseButton closeModal={closeModal} />}
+
+               {/* Modal's default styled title */}
+               {props.title &&
+                  <h2 className={classNames(s.title)}>{props.title}</h2>
+               }
+
+               {/* Modal's default styled subtitle */}
+               {props.subtitle &&
+                  <h2 className={classNames(s.subtitle)}>{props.subtitle}</h2>
+               }
+
+               {/* Modal's content */}
                <div className={s.wrapperInner}>
                   <div className={s.content}>
-                     <h4>Title</h4>
+                     {props.children}
                   </div>
                </div>
             </div>
          </div>,
-         document.getElementById('root')
-      )
-   );
+         document.getElementById('root'))
+      );
+   }
 
-   return [modal, openModal];
+   return [Modal, openModal];
 }
 
 
