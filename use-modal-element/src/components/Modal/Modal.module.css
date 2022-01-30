@@ -1,7 +1,3 @@
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .backgroundInit {
   /* position */
   position: fixed !important;
