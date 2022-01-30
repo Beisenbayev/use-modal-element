@@ -1,3 +1,8 @@
+.overflowHidden {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
 .wrapper {
   position: absolute !important;
   top: 16px !important;
@@ -54,4 +59,15 @@
   -webkit-transform: rotate(-45deg);
       -ms-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 425px) {
+  .wrapper {
+    top: 8px !important;
+    right: 8px !important;
+  }
+  .wrapper.fullScreen {
+    top: 16px !important;
+    right: 16px !important;
+  }
 }

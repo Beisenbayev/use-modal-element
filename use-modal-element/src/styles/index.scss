@@ -1,3 +1,14 @@
+//Screen sizes
+$bp-desktop: 1600px;
+$bp-laptopL: 1440px;
+$bp-laptop: 1024px;
+$bp-tabletL: 992px;
+$bp-tablet: 768px;
+$bp-mobileL: 425px;
+$bp-mobileM: 375px;
+$bp-mobileS: 320px;
+
+//Properties
 .overflowHidden {
    overflow: hidden !important;
    position: relative !important;

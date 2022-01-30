@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home';
-import useModal from 'use-modal-element'
+
+import useModal from 'use-modal-element';
 
 const App = (props) => {
   const [Modal, openModal] = useModal({
@@ -8,6 +9,7 @@ const App = (props) => {
     withCloseButton: true,
     closableBackground: true,
     scrollableBackground: false,
+    fullyShieldedMobile: false
   });
 
   return (

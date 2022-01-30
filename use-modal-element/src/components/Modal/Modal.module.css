@@ -1,3 +1,8 @@
+.overflowHidden {
+  overflow: hidden !important;
+  position: relative !important;
+}
+
 .backgroundInit {
   /* position */
   position: fixed !important;
@@ -21,12 +26,12 @@
   overflow: hidden;
 }
 
-.backgroundInit {
-  padding: 16px;
-}
-
 .backgroundInit.withBackground {
   background: rgba(0, 0, 0, 0.8);
+}
+
+.backgroundInit {
+  padding: 16px;
 }
 
 .wrapper {
@@ -43,7 +48,7 @@
 .title {
   margin: 0 0 8px 0;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 28px;
   line-height: 34px;
   color: #2b2932;
@@ -59,5 +64,63 @@
 }
 
 .content {
-  height: 300px;
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 32px 24px;
+  }
+  .title {
+    padding-right: 30px;
+    font-size: 22px;
+    line-height: 24px;
+  }
+  .subtitle {
+    margin: 8px 0 24px 0;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .backgroundInit.fullyShielded {
+    padding: 0 !important;
+  }
+  .backgroundInit.fullyShielded .wrapper {
+    /* position */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    /* display */
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    /* size */
+    width: 100% !important;
+    height: 100vh !important;
+    min-width: 100% !important;
+    min-height: 100vh !important;
+    max-width: 100% !important;
+    max-height: 100vh !important;
+    padding: 50px 16px 40px 16px;
+    /* style */
+    border-radius: 0;
+  }
+  .backgroundInit.fullyShielded .wrapper .title {
+    padding-right: 0;
+  }
+  .wrapper {
+    padding: 20px 16px;
+  }
+  .title {
+    padding-right: 35px;
+  }
 }

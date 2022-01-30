@@ -23,6 +23,7 @@ const useModal = (settings) => {
       withCloseButton = true,
       closableBackground = true,
       scrollableBackground = false,
+      fullyShieldedMobile = true
    } = settings;
 
    //Handlers
@@ -38,11 +39,15 @@ const useModal = (settings) => {
       return (opend && createPortal(
          <div
             className={classNames(s.backgroundInit, {
-               [s.withBackground]: withBackground
+               [s.withBackground]: withBackground,
+               [s.fullyShielded]: fullyShieldedMobile
             })}>
             <div ref={modalRef} className={s.wrapper}>
                {/* Modal's default styled close button */}
-               {withCloseButton && <CloseButton closeModal={closeModal} />}
+               {withCloseButton &&
+                  <CloseButton closeModal={closeModal}
+                     fullScreen={fullyShieldedMobile} />
+               }
 
                {/* Modal's default styled title */}
                {props.title &&

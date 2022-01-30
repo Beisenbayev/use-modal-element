@@ -1,3 +1,5 @@
+@import "../../styles/index.scss";
+
 //wrapper important styles
 .wrapper {
    position: absolute !important;
@@ -46,5 +48,17 @@
    }
    &::after {
       transform: rotate(-45deg);
+   }
+}
+
+@media screen and (max-width: $bp-mobileL) {
+   .wrapper {
+      top: 8px !important;
+      right: 8px !important;
+
+      &.fullScreen {
+         top: 16px !important;
+         right: 16px !important;
+      }
    }
 }
