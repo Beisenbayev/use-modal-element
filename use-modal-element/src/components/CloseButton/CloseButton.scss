@@ -1,0 +1,27 @@
+.content {
+   position: absolute !important;
+   top: 16px !important;
+   right: 16px !important;
+   cursor: pointer;
+   opacity: 0.3;
+
+   &:hover {
+      opacity: 1;
+   }
+
+   &::before,
+   &::after {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 2px;
+      background: #000;
+   }
+
+   &::before {
+      transform: rotate(45deg);
+   }
+   &::after {
+      transform: rotate(-45deg);
+   }
+}

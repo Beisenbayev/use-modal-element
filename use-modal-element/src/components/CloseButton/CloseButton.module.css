@@ -1,0 +1,31 @@
+.content {
+  position: absolute !important;
+  top: 5px !important;
+  right: 5px !important;
+  cursor: pointer;
+  opacity: 0.3;
+}
+
+.content:hover {
+  opacity: 1;
+}
+
+.content::before, .content::after {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 2px;
+  background: #000;
+}
+
+.content::before {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.content::after {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}

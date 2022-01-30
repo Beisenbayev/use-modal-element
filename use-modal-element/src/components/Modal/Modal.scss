@@ -2,7 +2,7 @@
    overflow: hidden;
 }
 
-.modal-background-init {
+.backgroundInit {
    /* position */
    position: fixed !important;
    z-index: 99999 !important;
@@ -25,11 +25,11 @@
    overflow: hidden;
 }
 
-.modal-background-init.with-background {
+.backgroundInit.withBackground {
    background: rgba(0, 0, 0, 0.8);
 }
 
-.modal-wrapper {
+.wrapper {
    position: relative;
    width: 400px;
    height: max-content;
@@ -38,7 +38,11 @@
    background: #fff;
 }
 
-.modal-text {
+.text {
    font-size: 26px;
    margin-bottom: 40px;
+}
+
+.content {
+   height: 300px;
 }

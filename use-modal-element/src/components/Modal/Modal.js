@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import classNames from 'classnames';
-import './modal.css';
+import s from './Modal.module.css';
 
 //Components
 import CloseButton from '../CloseButton/CloseButton';
@@ -37,20 +37,20 @@ const useModal = (settings) => {
    const modal = (
       opend && createPortal(
          <div
-            className={classNames('modal-background-init', {
-               'with-background': withBackground
+            className={classNames(s.backgroundInit, {
+               [s.withBackground]: withBackground
             })}>
-            <div ref={modalRef} className='modal-wrapper'>
+            <div ref={modalRef} className={s.wrapper}>
                {withCloseButton && <CloseButton />}
-               <div className='modal-wrapper-inner'>
-                  <div className='modal-content'>
+               <div className={s.wrapperInner}>
+                  <div className={s.content}>
                      <h4>Title</h4>
                   </div>
                </div>
             </div>
          </div>,
          document.getElementById('root')
-         )
+      )
    );
 
    return [modal, openModal];
