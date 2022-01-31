@@ -20,7 +20,10 @@ const useModal = (settings) => {
    //Default settings
    const {
       withBackground = true,
-      withCloseButton = true,
+      withCloseButton = {
+         type: 'default',
+         text: '',
+      },
       closableBackground = true,
       scrollableBackground = false,
       fullyShieldedMobile = true
@@ -45,7 +48,8 @@ const useModal = (settings) => {
             <div ref={modalRef} className={s.wrapper}>
                {/* Modal's default styled close button */}
                {withCloseButton &&
-                  <CloseButton closeModal={closeModal}
+                  <CloseButton handleAction={closeModal}
+                     settings={withCloseButton}
                      fullScreen={fullyShieldedMobile} />
                }
 

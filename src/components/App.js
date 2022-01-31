@@ -6,7 +6,10 @@ import useModal from 'use-modal-element';
 const App = (props) => {
   const [Modal, openModal] = useModal({
     withBackground: true,
-    withCloseButton: true,
+    withCloseButton: {
+      type: 'text',
+      text: '',
+    },
     closableBackground: true,
     scrollableBackground: false,
     fullyShieldedMobile: false
