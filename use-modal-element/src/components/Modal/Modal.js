@@ -5,6 +5,7 @@ import s from './Modal.module.css';
 
 //Components
 import CloseButton from '../CloseButton/CloseButton';
+import ControlButton from '../ControlButton/ControlButton';
 
 //Hooks
 import useOnClickOutside from '../../hooks/useOnClickOutside';
@@ -24,8 +25,13 @@ const useModal = (settings) => {
          scrollable: false,
       },
       withCloseButton = {
-         type: 'default',
+         type: 'default', // 'default', 'rounded', 'text'
          text: '',
+      },
+      withControlButton = {
+         type: 'default', // 'default', 'outlined', 'text'
+         text: 'button',
+         action: () => { console.log('empty') }
       },
       fullyShieldedMobile = true
    } = settings;
@@ -73,6 +79,11 @@ const useModal = (settings) => {
                      {props.children}
                   </div>
                </div>
+
+               {/* Modal's default styled control button */}
+               {withControlButton &&
+                  <ControlButton settings={withControlButton} />
+               }
             </div>
          </div>,
          document.getElementById('root'))

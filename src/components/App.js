@@ -10,10 +10,15 @@ const App = (props) => {
       // scrollable: true
     },
     withCloseButton: {
-      type: 'text',
+      type: 'rounded',
       text: '',
     },
-    fullyShieldedMobile: false
+    withControlButton: {
+      type: 'text',
+      text: 'My button',
+      action: () => console.log('haha')
+    },
+    fullyShieldedMobile: true
   });
 
   return (
@@ -22,7 +27,7 @@ const App = (props) => {
       <Modal
         title='Обратный звонок'
         subtitle='Перезвони в ближайшее время.'>
-        <p>awawdaw adwada awdawdaw awdadwawd</p>
+        <p >awawdaw adwada awdawdaw awdadwawd</p>
       </Modal>
     </>
   );

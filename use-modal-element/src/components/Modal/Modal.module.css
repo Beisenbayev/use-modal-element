@@ -63,10 +63,6 @@
   color: #2b2932;
 }
 
-.content {
-  height: 200px;
-}
-
 @media screen and (max-width: 768px) {
   .wrapper {
     padding: 32px 24px;

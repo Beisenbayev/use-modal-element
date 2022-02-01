@@ -1,0 +1,50 @@
+@import "../../styles/index.scss";
+
+//control button default styles
+.initStyle {
+   box-sizing: border-box;
+   width: 100%;
+   margin-top: 32px;
+   font-weight: 600;
+   font-size: 14px;
+   text-align: center;
+   line-height: 21px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+
+.defaultButton {
+   padding: 18px 20px 17px 20px;
+   border: 3px solid #3878d8;
+   border-radius: 6px;
+   background: #3878d8;
+   color: #fff;
+
+   &:hover {
+      background: #fff;
+      color: #3878d8;
+   }
+}
+
+.outlinedButton {
+   padding: 18px 20px 17px 20px;
+   border: 3px solid #3878d8;
+   border-radius: 6px;
+   background: #fff;
+   color: #3878d8;
+
+   &:hover {
+      background: #3878d8;
+      color: #fff;
+   }
+}
+
+.textButton {
+   width: fit-content;
+   font-size: 18px;
+   color: #3878d8;
+
+   &:hover {
+      text-decoration: underline;
+   }
+}
