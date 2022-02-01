@@ -23,8 +23,12 @@ const CloseButton = (props) => {
       return props.settings.text || 'Close';
    }
 
+   const classNameSetup = () => {
+      return props.settings.customClassName || '';
+   }
+
    return (
-      <div className={classNames(s.initStyle, buttonStyle, {
+      <div className={classNames(s.initStyle, buttonStyle, classNameSetup(), {
          [s.fullScreen]: props.fullScreen,
       })} onClick={props.handleAction}>
          {textSetup()}

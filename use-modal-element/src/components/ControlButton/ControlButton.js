@@ -21,8 +21,13 @@ const ControlButton = (props) => {
       return props.settings.text || 'Click me!';
    }
 
+   const classNameSetup = () => {
+      return props.settings.customClassName || '';
+   }
+
    return (
-      <div className={classNames(s.initStyle, buttonStyle)}
+      <div
+         className={classNames(s.initStyle, buttonStyle, classNameSetup())}
          onClick={props.settings.action}>
          {textSetup()}
       </div>

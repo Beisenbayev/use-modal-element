@@ -1,24 +1,31 @@
 import React from 'react';
 import Home from './Home';
 
+import './App.css';
+
 import useModal from 'use-modal-element';
 
 const App = (props) => {
   const [Modal, openModal] = useModal({
     withBackground: {
-      // closable: true,
-      // scrollable: true
+      closable: true,
+      scrollable: true
     },
     withCloseButton: {
       type: 'rounded',
       text: '',
+      customClassName: '',
     },
     withControlButton: {
-      type: 'text',
-      text: 'My button',
+      type: 'default',
+      text: 'Submit',
+      customClassName: '',
       action: () => console.log('haha')
     },
-    fullyShieldedMobile: true
+    additional: {
+      customWrapperClassName: '',
+      fullyShieldedMobile: true,
+    }
   });
 
   return (

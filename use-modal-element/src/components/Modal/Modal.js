@@ -27,13 +27,18 @@ const useModal = (settings) => {
       withCloseButton = {
          type: 'default', // 'default', 'rounded', 'text'
          text: '',
+         customClassName: '',
       },
       withControlButton = {
          type: 'default', // 'default', 'outlined', 'text'
          text: 'button',
+         customClassName: '',
          action: () => { console.log('empty') }
       },
-      fullyShieldedMobile = true
+      additional = {
+         customWrapperClassName: '',
+         fullyShieldedMobile: true,
+      }
    } = settings;
 
    //Handlers
@@ -43,7 +48,6 @@ const useModal = (settings) => {
 
    //Init 
    if (withBackground) {
-      console.log(withBackground)
       useOnClickOutside(modalRef, closeModal, withBackground.closable);
       useBackgroundScroll(opend, withBackground.scrollable);
    }
@@ -53,14 +57,15 @@ const useModal = (settings) => {
          <div
             className={classNames(s.backgroundInit, {
                [s.withBackground]: withBackground,
-               [s.fullyShielded]: fullyShieldedMobile
+               [s.fullyShielded]: additional.fullyShieldedMobile
             })}>
-            <div ref={modalRef} className={s.wrapper}>
+            <div ref={modalRef}
+               className={classNames(s.wrapper, additional.customWrapperClassName)}>
                {/* Modal's default styled close button */}
                {withCloseButton &&
                   <CloseButton handleAction={closeModal}
                      settings={withCloseButton}
-                     fullScreen={fullyShieldedMobile} />
+                     fullScreen={additional.fullyShieldedMobile} />
                }
 
                {/* Modal's default styled title */}
