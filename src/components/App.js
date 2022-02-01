@@ -5,13 +5,14 @@ import useModal from 'use-modal-element';
 
 const App = (props) => {
   const [Modal, openModal] = useModal({
-    withBackground: true,
+    withBackground: {
+      // closable: true,
+      // scrollable: true
+    },
     withCloseButton: {
       type: 'text',
       text: '',
     },
-    closableBackground: true,
-    scrollableBackground: false,
     fullyShieldedMobile: false
   });
 

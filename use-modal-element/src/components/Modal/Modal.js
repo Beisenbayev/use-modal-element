@@ -19,13 +19,14 @@ const useModal = (settings) => {
 
    //Default settings
    const {
-      withBackground = true,
+      withBackground = {
+         closable: true,
+         scrollable: false,
+      },
       withCloseButton = {
          type: 'default',
          text: '',
       },
-      closableBackground = true,
-      scrollableBackground = false,
       fullyShieldedMobile = true
    } = settings;
 
@@ -35,8 +36,11 @@ const useModal = (settings) => {
    const openModal = () => setOpend(true)
 
    //Init 
-   useOnClickOutside(modalRef, closeModal, closableBackground);
-   useBackgroundScroll(opend, scrollableBackground);
+   if (withBackground) {
+      console.log(withBackground)
+      useOnClickOutside(modalRef, closeModal, withBackground.closable);
+      useBackgroundScroll(opend, withBackground.scrollable);
+   }
 
    const Modal = (props) => {
       return (opend && createPortal(
