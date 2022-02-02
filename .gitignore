@@ -1,5 +1,9 @@
 ## Modules
-/node_modules
+node_modules/
 
 ## Built folders
 lib/
+
+
+.DS_Store
+src/.DS_Store
