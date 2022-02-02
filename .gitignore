@@ -4,6 +4,9 @@ node_modules/
 ## Built folders
 lib/
 
+## Style files
+*.module.css
 
+## Unknown files
 .DS_Store
 src/.DS_Store

@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { createPortal } from 'react-dom';
-import classNames from 'classnames';
 import s from './Modal.module.css';
 
 //Components
@@ -23,6 +22,7 @@ const useModal = (settings) => {
       withBackground = {
          closable: true,
          scrollable: false,
+         customClassName: ''
       },
       withCloseButton = {
          type: 'default', // 'default', 'rounded', 'text'
@@ -54,13 +54,13 @@ const useModal = (settings) => {
 
    const Modal = (props) => {
       return (opend && createPortal(
-         <div
-            className={classNames(s.backgroundInit, {
-               [s.withBackground]: withBackground,
-               [s.fullyShielded]: additional.fullyShieldedMobile
-            })}>
+         <div className={`${s.backgroundInit} ${withBackground.customClassName}
+               ${withBackground && s.withBackground}
+               ${additional.fullyShieldedMobile && s.fullyShielded}`} >
+
             <div ref={modalRef}
-               className={classNames(s.wrapper, additional.customWrapperClassName)}>
+               className={`${s.wrapper} ${additional.customWrapperClassName}`}>
+
                {/* Modal's default styled close button */}
                {withCloseButton &&
                   <CloseButton handleAction={closeModal}
@@ -70,12 +70,12 @@ const useModal = (settings) => {
 
                {/* Modal's default styled title */}
                {props.title &&
-                  <h2 className={classNames(s.title)}>{props.title}</h2>
+                  <h2 className={s.title}>{props.title}</h2>
                }
 
                {/* Modal's default styled subtitle */}
                {props.subtitle &&
-                  <h2 className={classNames(s.subtitle)}>{props.subtitle}</h2>
+                  <h2 className={s.subtitle}>{props.subtitle}</h2>
                }
 
                {/* Modal's content */}
@@ -90,12 +90,12 @@ const useModal = (settings) => {
                   <ControlButton settings={withControlButton} />
                }
             </div>
-         </div>,
+         </div >,
          document.getElementById('root'))
       );
    }
 
-   return [Modal, openModal];
+   return [Modal, toggleModal];
 }
 
 

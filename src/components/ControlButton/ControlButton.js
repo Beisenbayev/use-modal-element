@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import s from './ControlButton.module.css';
 
 const ControlButton = (props) => {
@@ -26,8 +25,7 @@ const ControlButton = (props) => {
    }
 
    return (
-      <div
-         className={classNames(s.initStyle, buttonStyle, classNameSetup())}
+      <div className={`${s.initStyle} ${buttonStyle} ${classNameSetup()}`}
          onClick={props.settings.action}>
          {textSetup()}
       </div>

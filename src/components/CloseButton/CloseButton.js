@@ -1,5 +1,4 @@
 import React from 'react';
-import classNames from 'classnames';
 import s from './CloseButton.module.css';
 
 const CloseButton = (props) => {
@@ -28,9 +27,8 @@ const CloseButton = (props) => {
    }
 
    return (
-      <div className={classNames(s.initStyle, buttonStyle, classNameSetup(), {
-         [s.fullScreen]: props.fullScreen,
-      })} onClick={props.handleAction}>
+      <div className={`${s.initStyle} ${buttonStyle} ${classNameSetup()}
+         ${props.fullScreen && s.fullScreen}`} onClick={props.handleAction}>
          {textSetup()}
       </div>
    );
