@@ -1,4 +1,3 @@
-/lib
 src/assets
 .babelrc
 webpack.config.js

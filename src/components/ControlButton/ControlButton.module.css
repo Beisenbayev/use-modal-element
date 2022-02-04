@@ -9,7 +9,7 @@
   width: 100%;
   margin-top: 32px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
   text-align: center;
   line-height: 21px;
   -webkit-transition: 0.3s;
@@ -19,7 +19,7 @@
 }
 
 .defaultButton {
-  padding: 18px 20px 17px 20px;
+  padding: 14px 20px 13px 20px;
   border: 3px solid #3878d8;
   border-radius: 6px;
   background: #3878d8;
@@ -32,7 +32,7 @@
 }
 
 .outlinedButton {
-  padding: 18px 20px 17px 20px;
+  padding: 14px 20px 13px 20px;
   border: 3px solid #3878d8;
   border-radius: 6px;
   background: #fff;

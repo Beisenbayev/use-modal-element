@@ -12,6 +12,7 @@
    display: flex !important;
    justify-content: center !important;
    align-items: center !important;
+   box-sizing: border-box !important;
 
    /* size */
    width: 100vw !important;
@@ -25,9 +26,14 @@
    }
 }
 
-//background default styles
+//background important styles
 .backgroundInit {
    padding: 16px;
+}
+
+//wrapper default styles
+.wrapper {
+   box-sizing: border-box !important;
 }
 
 //wrapper default styles

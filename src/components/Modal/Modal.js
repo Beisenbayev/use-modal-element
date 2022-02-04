@@ -39,7 +39,7 @@ const useModal = (settings) => {
          customWrapperClassName: '',
          fullyShieldedMobile: true,
       }
-   } = settings;
+   } = (settings || {});
 
    //Handlers
    const toggleModal = () => setOpend(value => !value);

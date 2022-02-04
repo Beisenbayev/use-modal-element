@@ -16,6 +16,8 @@
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 .roundedButton {

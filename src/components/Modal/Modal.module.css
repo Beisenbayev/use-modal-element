@@ -19,6 +19,8 @@
   -webkit-box-align: center !important;
       -ms-flex-align: center !important;
           align-items: center !important;
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
   /* size */
   width: 100vw !important;
   min-height: 100% !important;
@@ -32,6 +34,11 @@
 
 .backgroundInit {
   padding: 16px;
+}
+
+.wrapper {
+  -webkit-box-sizing: border-box !important;
+          box-sizing: border-box !important;
 }
 
 .wrapper {
