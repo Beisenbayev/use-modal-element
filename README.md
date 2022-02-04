@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/assets/logotype.svg" width="300px">
+  <img src="./src/assets/logotype.svg" width="400px">
 </p>
 <h2 align="center">Modal window for React applications</h2>
 
@@ -54,7 +54,7 @@ const [Modal, toggleModal] = useModal();
 
 ### Configuration
 
-All these configurations already written by default. But if you want to configure it yourself, here is a list of all available options. Configure it the way you want.
+All these configurations are set by default. But if you want to configure it yourself, here is a list of all available options. Configure it the way you want.
 
 ```js
 const [Modal, toggleModal] = useModal({
@@ -109,13 +109,13 @@ return (
     <h2>Some title</h2>
     <p>Some text</p>
 
-    <Modal title="Обратный звонок" subtitle="Перезвони в ближайшее время.">
+    <Modal title="Some title" subtitle="subtitle">
       <div>
         <span>here must be you content</span>
       </div>
     </Modal>
 
-    <button value="click" onClick={openModal} />
+    <button value="click" onClick={toggleModal} />
   </div>
 );
 ```
@@ -154,4 +154,4 @@ const App = (props) => {
 ```
 
 ## Demos
-demo codes will be ready soon!
+[Example demo](https://codesandbox.io/s/use-modal-element-min-example-ykeyc)
