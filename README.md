@@ -3,10 +3,9 @@
 </p>
 <h2 align="center">Modal window for React applications</h2>
 
-<!-- ![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/hivedb/hive/Dart%20CI/nndb?label=tests&labelColor=333940&logo=github)
-![Codecov branch](https://img.shields.io/codecov/c/github/hivedb/hive/nndb?labelColor=333940&logo=codecov&logoColor=white)
-![Pub Version](https://img.shields.io/pub/v/hive?label=pub.dev&labelColor=333940&logo=dart)
-![gzip size](http://img.badgesize.io/https://unpkg.com/react-modal/dist/react-modal.min.js?compression=gzip) -->
+![npm Version](https://img.shields.io/npm/v/use-modal-element)
+![npm Version](https://img.shields.io/npm/l/use-modal-element)
+![gzip size](https://img.badgesize.io/https:/unpkg.com/use-modal-element@1.4.7/lib/index.js?compression=gzip&labelColor=333940)
 
 A simple to use hook for creating a modal-window for [react-applications](https://reactjs.org/)
 
@@ -27,7 +26,7 @@ The [documentation](#) will be ready soon. Until then, you can use [demo](#demos
 
 To install, you can use [npm](https://npmjs.org/) or [yarn](https://yarnpkg.com):
 
-    $ npm install --save use-modal-element
+    $ npm install use-modal-element     
     $ yarn add use-modal-element
 
 ## Features
